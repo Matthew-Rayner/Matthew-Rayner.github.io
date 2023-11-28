@@ -1,14 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background-color: #2b2b29;
-      color: white; /* Set text color to contrast with the background */
+      color: white;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-bar {
+      background-color: #333;
+      padding: 10px;
+      display: flex;
+      align-items: center; /* Align items vertically in the center */
+    }
+
+    .top-bar h1 {
+      margin-left: 50px;
+    }
+
+    .top-bar-buttons {
+      display: flex;
+      margin-left: 50px; /* Move buttons to the left */
+    }
+
+    .top-bar-button {
+      margin-left: 25px;
+      color: white;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .top-bar-button:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: background-color 0.3s ease;
     }
   </style>
 </head>
 <body>
+  <div class="top-bar">
+    <h1>Matthew Rayner</h1>
+    <div class="top-bar-buttons">
+      <a class="top-bar-button" href="#">Resume</a>
+      <a class="top-bar-button" href="#">Uni Projects</a>
+      <a class="top-bar-button" href="#">Personal Projects</a>
+      <a class="top-bar-button" href="#">About Me</a>
+    </div>
+  </div>
   <h1>Hello World</h1>
   <p>I'm hosted with GitHub Pages.</p>
 </body>
