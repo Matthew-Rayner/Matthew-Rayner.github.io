@@ -1,56 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background-color: #2b2b29;
-      color: white;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matthew Rayner - Portfolio</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
 
-    .top-bar {
-      background-color: #333;
-      padding: 10px;
-      display: flex;
-      align-items: center; /* Align items vertically in the center */
-    }
+        /* Video container */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
 
-    .top-bar h1 {
-      margin-left: 50px;
-    }
+        /* Top navigation */
+        .nav {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            right: 1rem;
+            display: flex;
+            justify-content: space-between;
+            z-index: 10;
+        }
 
-    .top-bar-buttons {
-      display: flex;
-      margin-left: 50px; /* Move buttons to the left */
-    }
+        .nav-left, .nav-right {
+            display: flex;
+            gap: 1rem;
+        }
 
-    .top-bar-button {
-      margin-left: 25px;
-      color: white;
-      text-decoration: none;
-      position: relative;
-    }
+        .nav a {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
 
-    .top-bar-button:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      transition: background-color 0.3s ease;
-    }
-  </style>
+            .nav a:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+        /* Centered content */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 2rem;
+            border-radius: 1rem;
+            z-index: 5;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0 0 1rem 0;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+
+        a {
+            color: #00ffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+    </style>
 </head>
 <body>
-  <div class="top-bar">
-    <h1>Matthew Rayner</h1>
-    <div class="top-bar-buttons">
-      <a class="top-bar-button" href="#">Resume</a>
-      <a class="top-bar-button" href="#">Uni Projects</a>
-      <a class="top-bar-button" href="#">Personal Projects</a>
-      <a class="top-bar-button" href="#">About Me</a>
+
+    <!-- Fullscreen background video -->
+    <video class="video-bg" autoplay muted loop playsinline>
+        <source src="Assets/LoopingPlanetDemo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+
+
+    <!-- Top navigation -->
+    <div class="nav">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+        </div>
+        <div class="nav-right">
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </div>
-  </div>
-  <h1>Hello World</h1>
-  <p>I'm hosted with GitHub Pages.</p>
+
+    <!-- Overlay text content -->
+    <div class="content">
+        <h1>Hello, I'm Matthew</h1>
+        <p>I'm a Programmer with over 10 years of experience making games</p>
+        <p><a href="https://github.com/your-username" target="_blank">Visit my itch page</a></p>
+    </div>
+
 </body>
 </html>
