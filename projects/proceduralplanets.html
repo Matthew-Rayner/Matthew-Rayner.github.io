@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Procedural Planet Generation Tool - Project</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: sans-serif;
+            overflow: auto;
+            color: white;
+        }
+
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .nav {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            right: 1rem;
+            display: flex;
+            justify-content: space-between;
+            z-index: 10;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav a {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+            .nav a:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+        .project-container {
+            position: relative;
+            max-width: 800px;
+            margin: 8rem auto 4rem auto;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            border-radius: 1rem;
+            z-index: 5;
+        }
+
+            .project-container h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .project-container p {
+                font-size: 1.2rem;
+                line-height: 1.6;
+            }
+
+            .project-container img {
+                max-width: 100%;
+                border-radius: 0.5rem;
+                margin: 1rem 0;
+                border: 2px solid white;
+            }
+
+        a.back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #00ffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            a.back-link:hover {
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video class="video-bg" autoplay muted loop playsinline>
+        <source src="../Assets/LoopingPlanetDemo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+        </div>
+        <div class="nav-right">
+            <a href="files/Matthew_Rayner_CV_2025.pdf" download class="resume-button">Download CV</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Project Content -->
+    <div class="project-container">
+        <h1>Procedural Planet Generation Tool</h1>
+        <p>The <strong>Procedural Planet Generation Tool</strong> is a tool built to be used by game developers to generate stylized looking planets. </p>
+
+        <img src="../images/ProceduralPlanetToolEngine.png" alt="Screenshot of the generated planet in engine" />
+
+        <p>The project was built as part of my MSc in Game Development using Unity and C#. For this module, we were given freedom to make whatever we wanted so I chose to work with procedural terrain. After talking to my supervising lecturer I began the 12 week journey that was this project. </p>
+
+        <p>Some of the major challenges in this project were:</p>
+        <ul>
+            <li>Optimising the generation algorithm</li>
+            <li>Sewing up seams of the shape</li>
+            <li>UV mapping a procedurally generated object</li>
+            <li>Creating a system to save the objects once generated</li>
+        </ul>
+
+        <p>My main takeaways from this project were learning how to:</p>
+        <ul>
+            <li>Generate terrain procedurally using perlin noise</li>
+            <li>Create meshes through code</li>
+            <li>Generate UVs and Textures for meshes</li>
+            <li>Create a basic water shader with shadergraph</li>
+        </ul>
+
+        <a href="../projects.html" class="back-link">← Back to Projects</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plague Frontier - Project</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: sans-serif;
+            overflow: auto;
+            color: white;
+            background: url("../images/PlagueFrontierBackground.png") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .nav {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            right: 1rem;
+            display: flex;
+            justify-content: space-between;
+            z-index: 10;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav a {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+            .nav a:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+        .project-container {
+            position: relative;
+            max-width: 800px;
+            margin: 8rem auto 4rem auto;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            border-radius: 1rem;
+            z-index: 5;
+        }
+
+            .project-container h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .project-container p {
+                font-size: 1.2rem;
+                line-height: 1.6;
+            }
+
+            .project-container img {
+                max-width: 100%;
+                border-radius: 0.5rem;
+                margin: 1rem 0;
+                border: 2px solid white;
+            }
+
+        a.back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #00ffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            a.back-link:hover {
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+        </div>
+        <div class="nav-right">
+            <a href="files/Matthew_Rayner_CV_2025.pdf" download class="resume-button">Download CV</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Project Content -->
+    <div class="project-container">
+        <h1>Plague Frontier</h1>
+        <p><strong>Plague Frontier</strong> is a wave-based zombie shooter developed in Unity, featuring a weapon system with attachments, wave based scaling, and fun physics interactions.</p>
+
+        <video controls width="100%" style="border: 2px solid white; border-radius: 0.5rem; margin: 1rem 0;">
+            <source src="../Assets/PlagueFrontierProjectDemo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <p>The project was built as part of my MSc in Game Development using Unity and C#. I was in a group with one other student so I concentrated on programming while he used asset packs and designed the level, UI and story elements. I focused on enemy AI, game balancing, and satisying gameplay. The game includes a wave spawning system, wave based enemy scaling, and an expandable weapons system.</p>
+
+        <p>Some of the systems I developed include:</p>
+        <ul>
+            <li>Enemy wave management system that tracks all enemies and makes them stronger each round</li>
+            <li>A custom editor tool for creating spawnpoints</li>
+            <li>An highly configurable and expandable weapon system</li>
+            <li>A project wide audio system</li>
+            <li>A pose swapping system for aiming down sights using Unity's Animation Rigging package</li>
+        </ul>
+
+        <p>My main takeaways from this project were learning how to:</p>
+        <ul>
+            <li>Create an audio system with an external settings file</li>
+            <li>Work with a rigged character and animations</li>
+            <li>Implement navmesh based navigation in an environment with verticality</li>
+            <li>Work with an asset pack effectively</li>
+            <li>Implement a weapon system with sfx and vfx for player feedback</li>
+            <li>Implement an expandable event system for events like "Shot" or "Interacted" using UnityEvents and delegates</li>
+        </ul>
+
+        <a href="../projects.html" class="back-link">← Back to Projects</a>
+    </div>
+
+</body>
+</html>
